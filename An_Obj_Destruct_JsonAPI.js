@@ -17,7 +17,7 @@ const invoiceData = {
 
 }
 // Destructuring the invoiceData object
-const { invoiceId,amountTotal: amount, items } = invoiceData;
+const { invoiceId, amountTotal: amount, items } = invoiceData;
 console.log("The Invoice Id:", invoiceId, "and the Item's unit price:", items[0].unitPrice,
     `\n with Total Amount: $${amount}`
 );
