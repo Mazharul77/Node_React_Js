@@ -1,3 +1,7 @@
+
+const greet = (name) => ({ 'message': `Hello ${name},  Welcome to JavaScript!: This is an arrow function example.` });
+console.log(greet('Mazharul Islam Bhuiyan')); // Hello, Mazharul Islam Bhuiyan Welcome to JavaScript!': 'This is an arrow function example.
+
 /* ...... Arrow function : implicitly return a value without using the return keyword ......... 
 It is a shorter syntax for writing function in js.
  It is also known as a lamda function.
@@ -10,8 +14,6 @@ It is a shorter syntax for writing function in js.
         It is not suitable for callback functions.
             It is not suitable for functions that need to access the this object context.
 */
-
-
 const addNumbers = (n1, n2) => (n1 + n2);
 console.log("The summation result:", addNumbers(25, 35)); // 60
 
