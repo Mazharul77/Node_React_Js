@@ -44,15 +44,24 @@ for (let index = 1; index <= 20; index++) {
     if (index == 5) {
         console.log(`Detected 5`);
         continue;
+        //now the loop will skip the rest of the code and move to the next iteration when index is 5
     }
-    console.log(`Value of i is ${index}`);
+    console.log(`Value of i is: ${index}`);
 }   
 
-// for (let index = 1; index <= 20; index++) {
-//     if (index == 5) {
-//         console.log(`Detected 5`);
-//         continue
-//     }
-//     console.log(`Value of i is ${index}`);
+// on Map set : can't use loop
+const myMapObj = new Map();
 
-// }
+myMapObj.set('name', 'Mazharul Islam Bhuiyan');
+myMapObj.set('addr', 'Dhaka, BD');
+myMapObj.set('id', '171');
+
+
+
+// method 1: using single object printing of Map object
+console.log(`The Map Object: ${myMapObj.get('name')}`);
+
+//method 2: using forEach method of Map object to iterate through the key-value pairs
+myMapObj.forEach((value, key) => {
+    console.log(`The info key attributes:${key} and value is: ${value}`);
+})
