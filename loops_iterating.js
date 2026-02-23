@@ -65,3 +65,20 @@ console.log(`The Map Object: ${myMapObj.get('name')}`);
 myMapObj.forEach((value, key) => {
     console.log(`The info key attributes:${key} and value is: ${value}`);
 })
+
+// item, index, array in for loop iterations:
+languageTests.forEach((item, index, array) => {
+    console.log('The item is:', item, 'and the index:', index, 'and the array:', array);
+})
+
+
+// list of dictionary data acces with for loop of an array of objects:
+let students = [
+    {name: 'John', age: 20},
+    {name: 'Jane', age: 22},
+    {name: 'Doe', age: 21}
+];
+
+students.forEach((pupil) => {
+    console.log(`The name of the student:${pupil.name} and the age is: ${pupil.age}`);
+})
