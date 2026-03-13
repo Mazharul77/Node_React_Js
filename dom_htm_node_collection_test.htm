@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Node Collection Test</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            .main_surface{
+                background-color: #000000;
+            }
+            .main_surface *{
+                color: #ffffff;
+            }
+            
+        </style>
+    </head>
+
+    <body class="main_surface">
+        <nav class="nav_menus_custom">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">
+                        <div  class='search_section' id='search_section_id'
+                              style="background-color: yellow;">
+                            <span style="color: red;"> Search </span>
+                            <input type="text" value="" id="input_text"
+                                class="input_query text-primary" placeholder="Search Anything Here...."/>
+                        </div> 
+                    </a>
+                </li>
+                </ul>
+        </nav>
+        
+        <h4 class="main_page_heading pt-5 text-center"> Heading of the Page </h4>
+        <div id="div_container">
+            <h1 id="topic_title"  class="topic_class text-center"> The Topic Sentences </h1>
+            <p class="mx-auto"> Page para - 1 </p>
+            <p class="pagination_2 mx-auto"> Pagination section 2 </p>
+            <span> : Dynamical future scope. </span>
+        
+        </div>
+
+
+        <script>
+            const nav_parent = document.querySelector('.nav');
+            console.log("Nav parent element:", nav_parent);
+            console.log("Nav children element:", nav_parent.children);
+
+            // Accessing the First child element of the nav parent element using the firstElementChild/firstChild property
+            console.log("========== Nav First Child mennu element: (with firstElementChild/firstChild properties)  ============")
+            console.log("First Child list elem:", nav_parent.firstElementChild)
+            console.log("First Child elem text/content:", nav_parent.firstElementChild.innerText)
+
+            // get 1st list menu item bydefault with querrySelector and then get it's parent with parentElement property
+            const menu_item_1 = document.querySelector('.nav-item');
+            console.log("\n Firts menu elem:", menu_item_1, " 1st menu content: ",menu_item_1.innerText, " and it's parent:", menu_item_1.parentElement);
+
+            // next sibling of 1st first menu item:
+            console.log("Next Sibling of the 1st menu item:", menu_item_1.nextElementSibling, " and it's content:", menu_item_1.nextElementSibling.innerText);
+
+            // last child element of the nav parent element using the lastElementChild/lastChild property
+            console.log("\n ========== Nav Last Child mennu element: (with lastElementChild/lastChild properties)  ============")
+            console.log("Last Child list menu element:", nav_parent.lastElementChild)
+            console.log("Last Child list menu element's text/conten:", nav_parent.lastElementChild.innerText);
+
+            // NodeList of all the child elements of the nav parent element:
+            const childNodes = nav_parent.childNodes;
+            console.log("\n\n========== Nav All Child mennu elements: (with childNodes properties)  ============")
+            console.log("Child nodes of the nav parent element:", childNodes);
+            
+            //childNodes.forEach(function(item){
+            //    console.log(item.innerText);
+            //})  
+
+            // Accessing the child elements of the nav parent element using the children property
+            console.log("========== Nav All Child mennu elements: (with children properties)  ============")
+            for (let item=0; item < nav_parent.children.length; item++ ){
+                console.log( nav_parent.children[item].innerText);
+            }
+
+
+            
+            const my_ul = document.querySelector('ul');
+            console.log("\n\n My UL elem:", my_ul);
+
+            const my_li = my_ul.querySelectorAll('li');
+            console.log("My Li elem:", my_li);
+
+            my_li.forEach(function(item){
+                item.style.letterSpacing = '2px';
+            })
+
+            /*
+            The querySelectorAll method returns a static NodeList, which is a collection of nodes that match the specified CSS selector.
+            */
+            const paragraphs = document.querySelectorAll("#div_container p");
+            console.log("Number of paragraphs:", paragraphs.length);
+
+            // Get all elements within the container
+            const allElements = document.querySelectorAll("#div_container *");
+            console.log("Number of elements:", allElements.length);
+
+            /* Array.from():
+            From the HTML - collection we can not access or modify the elements directly.
+            Even if we try to modify the elements, it will not reflect in the DOM.
+            So, we need to convert the HTML - collection into an array to access and modify
+            the elements directly.
+             We can use the Array.from() method to convert the HTML-collection into an array.
+            */
+            console.log(" -------------------- All nav-item elements(HTML collection if any): -------------")
+            const navItems = document.getElementsByClassName('nav-item');
+            console.log("Nav items(HTML Collection):", navItems);
+            
+    </script>
+    </body>
+</html>

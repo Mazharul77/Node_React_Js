@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Element Creation</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            .main_surface{
+                background-color: #000000;
+            }
+            .main_surface *{
+                color: #ffffff;
+            }
+            
+        </style>
+    </head>
+
+    <body class="main_surface container-fluid">
+        <h4 class="main_page_heading pt-5 text-center"> Heading of the Page </h4>
+        <div id="div_container">
+            <h1 id="topic_title"  class="topic_class text-center"> Welcome to the JS exploring Journey! </h1>
+            <p class="mx-auto intro"> Page para - 1 </p>
+            <p class="pagination_2 mx-auto"> Pagination section 2 </p>
+            <p class="optional-para"> Deep dive into React-JS at next level.</p>
+            <span> : Dynamical future scope. </span>
+        
+        </div>
+        
+        <script>
+            // ======= Create, Edit, Delete DOM Elements =======
+
+            // (Create): Dom new element creation and appending to the body of the page.
+            const new_custom_div = document.createElement('div');
+
+            new_custom_div.className = 'about_section';
+            new_custom_div.id = Math.round(Math.random()*10+1);
+            new_custom_div.setAttribute('title', 'About Us');
+            new_custom_div.style.backgroundColor = '#333333';
+            new_custom_div.style.width = "555px";
+            new_custom_div.style.height = "auto";
+            new_custom_div.style.padding = "20px";
+            new_custom_div.style.margin = "10px auto";
+            new_custom_div.style.borderRadius = "10px";
+
+            <!-- new_custom_div.innerText = 'This is a new div element created using JS'; -->
+
+            const add_text_node = document.createTextNode('This is a new text node(createTextNode) created using js');
+
+            // Now add the new div inside body and then the text node inside the created div
+            document.body.appendChild(new_custom_div);
+            new_custom_div.appendChild(add_text_node);
+
+            // new button element creation and appending to the newly created div
+            const new_button = document.createElement('button');
+            new_button.className = 'btn btn-outline-warning p-2 ml-2';
+
+            // keep the textNode inside an acchor tag and then append the anchor tag to the button
+            const anchor_tag = document.createElement('a');
+            anchor_tag.href = 'https://www.google.com';
+            anchor_tag.target = '_blank';
+            anchor_tag.style.textDecoration = 'none';
+
+            button_text_node = document.createTextNode('Read More...');
+            anchor_tag.appendChild(button_text_node);
+            new_button.appendChild(anchor_tag);
+
+            // keep this button inside a span tag and then append the span tag to the newly created div
+            const btn_span = document.createElement('span');
+            btn_span.appendChild(new_button);
+
+            new_custom_div.appendChild(btn_span);
+
+
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            newDiv.className = 'new-div-class';
+            newDiv.innerText = 'This is a dynamically created div element.';
+
+            // Append the new div to the body
+            document.body.appendChild(newDiv);
+
+            // Create a new button element
+            const newButton = document.createElement('button');
+            newButton.className = 'btn btn-primary mt-3';
+            newButton.innerText = 'Click Me';
+
+            // Append the button to the newly created div
+            newDiv.appendChild(newButton);
+
+            
+            // (Edit/Update):
+            const para = document.querySelector('.intro');
+            para.outerHTML = '<p class="update_para_intro text-primary px-2"> Js learning is started with browser </p>';
+            
+            // (Update with full replace)
+            new_para_text = document.createTextNode('Js learning is started with browser explored documents inspection.');
+            para.replaceWith(new_para_text);
+
+            // (Delete): select last paragraph and remove it from the DOM
+            const last_para = document.querySelector('p:nth-child(4)');
+            last_para.remove();
+    </script>
+    </body>
