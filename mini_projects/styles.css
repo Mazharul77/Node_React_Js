@@ -1,0 +1,6 @@
+.projects .project-link{
+    text-decoration: none;
+    display: block;
+    letter-spacing: .1rem;
+    font-size: 18px;
+}

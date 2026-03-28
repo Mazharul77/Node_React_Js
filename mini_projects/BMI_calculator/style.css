@@ -1,0 +1,17 @@
+body{
+    background-color: grey !important;
+}
+nav.nav_menues{
+    text-align: center;
+    font-size: 18px;
+}
+nav.nav_menues .nav-item{
+    display: inline-block;
+    padding: .5rem .3rem;
+}
+
+.nav_menues a{
+    text-decoration: none;
+    color: black;
+
+}
