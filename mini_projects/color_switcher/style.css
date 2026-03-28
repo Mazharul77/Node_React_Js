@@ -1,0 +1,20 @@
+span.color-button{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+span#grey{
+    background-color: grey;
+}
+span#white{
+    background-color: white;
+}
+span#blue{
+    background-color: blue;
+}
+span#yellow{
+    background-color: yellow;
+}
+
