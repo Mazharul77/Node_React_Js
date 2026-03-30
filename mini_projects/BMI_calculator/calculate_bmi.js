@@ -10,13 +10,16 @@ form.addEventListener('submit', function (event) {
 
     const userText = document.getElementById('userText');
 
-    if (weight === '' || weight < 0 || isNaN(weight)) {
-        userText.innerHTML = 'Weight Amount must be a valid number!';
-        results.innerHTML = `<h4 class='text-center bg-danger text-white p-2 m-2'> .... 😂 Your System is Hacked 😂 .... </h4>`;
-        document.querySelector('#weight').value = '';
-        document.querySelector('#height').value = '';
+    if ((weight === '' || weight < 0 || isNaN(weight))
+        && (height === '' || height < 0 || isNaN(height))) {
+
+        userText.innerHTML = `<h4> You need to enter both valid Weight & Height. </h4>`;
+        userText.style.color = 'white';
+        results.innerHTML = '';
+
     }
-    else if (weight && height === '' || height < 0 || isNaN(height)) {
+
+    else if ((weight >= 0) && (height === '' || height < 0 || isNaN(height))) {
         userText.innerHTML = `You need to enter a valid height instead of: ${height}!`;
 
         document.querySelector('#height').value = '';
@@ -25,10 +28,11 @@ form.addEventListener('submit', function (event) {
         results.innerHTML = `<h4 class='text-center bg-danger text-white p-2 m-2'> .... 😂 Your System is Hacked 😂 .... </h4>`;
     }
     else {
-        if (weight === '' || weight < 0 || isNaN(weight)) {
-            if (height === '' || height < 0 || isNaN(height)) {
-                userText.innerHTML = `You need to enter both valid weight & height`;
-            }
+        if ((weight === '' || weight < 0 || isNaN(weight)) && (height > 0)) {
+            userText.innerHTML = 'Weight Amount must be a valid number!';
+            results.innerHTML = `<h4 class='text-center bg-danger text-white p-2 m-2'> .... 😂 Your System is Hacked 😂 .... </h4>`;
+            document.querySelector('#weight').value = '';
+            document.querySelector('#height').value = '';
         }
         else {
             if (height > 0) {
@@ -59,6 +63,8 @@ form.addEventListener('submit', function (event) {
                     // userStatus.style.backgroundColor = '#00fffff7 !important';
                     userStatus.style.fontSize = '20px';
                     results.appendChild(userStatus);
+
+                    userText.innerHTML = '';
                 }
             }
             else {
