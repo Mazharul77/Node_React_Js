@@ -1,0 +1,97 @@
+body{
+    background-color: lightcyan !important;
+}
+nav.nav_menues{
+    text-align: center;
+    font-size: 18px;
+}
+nav.nav_menues .nav-item{
+    display: inline-block;
+    padding: .5rem .3rem;
+}
+
+.nav_menues a{
+    text-decoration: none;
+    color: black;
+
+}
+.num_guess_root .game_level{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+
+}
+.num_guess_root .guess_header{
+    color: coral;
+}
+.num_guess_root .lead_topic{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.promo_root #guess_form{
+    background-color: #49f2f2;
+}
+.num_guess_root{
+    width: 300px;
+    text-align: center;
+    margin-top: 50px;
+    border: 1px solid green;
+    padding: 10px;
+    border-radius:20px;
+}
+
+ #guess_form .guess_label{
+    font-size: 20px;
+}
+.num_guess_root #guess_input_field{
+    border-radius: 20px;
+    text-align: center;
+    color: green;
+}
+.num_guess_root #guess_input_field{
+    width: 200px;
+    margin: 10px auto;
+    
+}
+.num_guess_root #guess_form{
+    width: 360px;
+    margin: 0 auto;
+    background-color: grey;
+    color: white;
+    padding: 40px 10px;
+    border-radius: 20px;
+}
+
+.promo_root #guess_form{
+    background-color: #49f2f2;
+    color: #d23c3c;
+}
+
+.promo_root #guess_form #submitGuess{
+    color: #d23c3c;
+}
+
+#guess_form #submitGuess{
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+}
+
+
+#guess_form #submitGuess:hover{
+    font-size: 22px;
+}
+
+.low_high_input.high{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+.low_high_input.low{
+    color: yellowgreen;
+    font-size: 18px;
+    font-weight: bold;
+}

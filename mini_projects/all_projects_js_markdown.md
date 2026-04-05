@@ -1,6 +1,6 @@
 # Mark Down: Related to Projects - DOM
 
-## Theme Switcher Gaming in Js:
+## Some Attractive Projects in Js: Developed by Myself (Mazharul Islam Bhuiyan)
 [Click here](https://stackblitz.com/edit/stackblitz-starters-qjnqcf5c?file=index.html)
 
 ## Theme Switcher Gaming in Js:
