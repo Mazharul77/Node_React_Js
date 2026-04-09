@@ -1,0 +1,34 @@
+body{
+    background-color: lightcoral !important;
+}
+nav.nav_menues{
+    text-align: center;
+    font-size: 18px;
+}
+nav.nav_menues .nav-item{
+    display: inline-block;
+    padding: .5rem .3rem;
+}
+
+.nav_menues a{
+    text-decoration: none;
+    color: black;
+
+}
+.keyboard_event_keys{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#key_display{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

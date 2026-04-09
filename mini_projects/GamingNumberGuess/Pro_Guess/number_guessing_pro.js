@@ -98,6 +98,8 @@ function endGame() {
     userInput.value = '';
     userInput.setAttribute('disabled', 'disabled');
     submit.setAttribute('disabled', 'disabled');
+    playGame = false;
+
     para.classList.add('button', 'btn', 'btn-outline-warning', 'mt-1');
     para.setAttribute('id', 'newGameStarter');
     para.textContent = `Start New Game`; 

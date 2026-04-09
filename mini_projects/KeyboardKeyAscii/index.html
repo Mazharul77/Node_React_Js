@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="../styles.css" /> -->
+    <title>Key Code - Keyboard Event</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+
+    <style>
+        table,th, td{
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+        .key_tab_area{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav_menues">
+        <li class="nav-item active"> <a class="nav-link" href="./" aria-current="page">Home</a> </li>
+        <!-- <li class="nav-item"> <a class="nav-link" target="_blank" href="https://www.mazharul.pythonanywhere.com/">Mazharul Islam Bhuiyan's Code House</a> </li> -->
+        <li class="nav-item"> <a class="nav-link" target="_blank"
+                href="https://stackblitz.com/edit/stackblitz-starters-qjnqcf5c?file=index.html">Mazharul Islam Bhuiyan's
+                Code House</a> </li>
+    </nav>
+    <div class="container keyboard_event_keys">
+        <h1>.............. Keyboard Pressed Key and Ascii Values ...............</h1>
+        <h4>Press any key on your keyboard to see its details.</h4>
+        <div id="key_display"></div>
+    </div>
+</body>
+<script src="key_events.js"></script>
+
+</html>
