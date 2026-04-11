@@ -6,13 +6,15 @@ window.addEventListener("keydown", (event) => {
         <table>
         <tr>
             <th>Key (key)</th>
-            <th>ASCII Value (keyCode)</th>
+            <th class="deprecated">ASCII Value (.keyCode): Deprecated</th>
+            <th class="latest">ASCII Value (.key.charCodeAt(0)): Latest</th>
             <th>Key Code Description (code)</th>
         </tr>
 
         <tr>
             <td> ${event.key === " " ? "Space" : event.key} </td>
-            <td> ${event.keyCode} </td>
+            <td class="deprecated"> ${event.keyCode} </td>
+            <td class="latest"> ${event.key.charCodeAt(0)} </td>
             <td> ${event.code} </td>
 
         </tr>

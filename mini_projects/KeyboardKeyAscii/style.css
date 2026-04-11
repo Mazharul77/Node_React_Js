@@ -33,3 +33,15 @@ nav.nav_menues .nav-item{
     justify-content: center;
     align-items: center;
 }
+
+#key_display .deprecated{
+    color: red;
+    font-weight: bold;
+}
+
+#key_display .latest{
+    color: green;
+    font-weight: bold;
+}
+
+
