@@ -22,6 +22,9 @@ document.addEventListener('mousemove', function (event) {
 const cursorMoving = function (pageX, pageY) {
     let randomColors = cursor_colors[Math.floor(Math.random() * cursor_colors.length)]
 
+    // but don't give priority over nav link and buttons also so that the nave items and buttons are clickable
+
+    
     cursor_pointer.style.left = pageX + 'px';
     cursor_pointer.style.top = pageY + 'px';
 
