@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+
+body{
+    background-color: rgb(21, 21, 21) !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+nav.nav_menues{
+    text-align: center;
+    font-size: 18px;
+}
+nav.nav_menues .nav-item{
+    display: inline-block;
+    padding: .5rem .3rem;
+}
+
+.nav_menues a{
+    text-decoration: none;
+    color: rgb(245, 238, 238);
+
+}
+
+
+.container.cursor_manager{
+    text-align: center;
+    margin: 30px auto;
+}
+
+.container.cursor_manager h2{
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    font-size: 4rem;
+}
+
+.container.cursor_manager .cursor_instruct{
+    font-family: sans-serif;
+    color: white;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+button{
+    padding: 0;
+    margin: 0;
+    border: transparent;
+    background: transparent;
+    color: #fff;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+div.cursor{
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+
+    background: blue;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: cursor 6s infinite alternate;
+}
