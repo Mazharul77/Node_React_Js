@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="nav_menues">
+        <li class="nav-item active"> <a class="nav-link" href="./" aria-current="page">Home</a> </li>
+        <!-- <li class="nav-item"> <a class="nav-link" target="_blank" href="https://www.mazharul.pythonanywhere.com/">Mazharul Islam Bhuiyan's Code House</a> </li> -->
+        <li class="nav-item"> <a class="nav-link" target="_blank"
+                href="https://stackblitz.com/edit/stackblitz-starters-qjnqcf5c?file=index.html">Mazharul Islam Bhuiyan's
+                Code House</a> </li>
+    </nav>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+
+        nav.nav_menues {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 4px;
+        }
+
+        nav.nav_menues li {
+            list-style: none;
+            margin: 0 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        nav.nav_menues li a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav.nav_menues li a:hover {
+            background-color: #555;
+            font-size: 20px;
+            letter-spacing: 3px;
+
+        }
+
+        .event_manager h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-top: 22px;
+            color: #333;
+            font-size: 4rem;
+        }
+
+        .event_manager div#user_profile_card {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+
+    <div class="container event_manager">
+        <h2>API Requests & Async JS <br/> <span class="h1">(Ajax Programming)</span></h2>
+        <!-- Now we will make a card(image, name, email, etc) with github api  -->
+        <!-- XMLHttpRequest => XMLHttpRequestEventTarget => EventTarget -->
+
+        <div id="user_profile_card"></div>
+
+
+    </div>
+    
+    <script>
+        /*
+         github api(api.github.com/users/mazharul77),
+         XMLHttpRequest,
+          0.unsent: only client is created
+           1. open(),
+            2.send():  headers_reveived;
+             3.loading
+              4.done, 
+
+              readyState, onreadystatechange, reponse
+        */
+
+        /* let's observe the XMLHttpRequest object's properties and methods in console */
+        const url = "https://api.github.com/users/mazharul77";
+        
+        const XHR = new XMLHttpRequest();
+        console.log("Initial XHR: ", XHR);
+
+        XHR.open("GET", url);
+        console.log("After Open(): ", XHR);
+        console.log("After Open() readyState val: ", XHR.readyState);
+
+        XHR.onreadystatechange = function(){
+            console.log("After open(), Inside onreadystatechange val:", XHR.readyState);
+            
+            if (XHR.readyState === 4){
+                //resonseText is a string and we need to parse it to a js object
+                const user_profile_card = document.getElementById("user_profile_card");
+
+                const respData = JSON.parse(this.responseText);
+                console.log("Response Data: ", respData);
+                console.log("User Login:", respData.login, " and image:", respData.avatar_url);
+                user_profile_card.innerHTML = `
+                    <div class="card" style="width: 18rem;">
+                        <img src="${respData.avatar_url}" class="card-img-top" alt="User Avatar">
+                        <div class="card-body">
+                            <h5 class="card-title">${respData.login}</h5>
+                            <h5 class="card-text">${respData.name}</h5>
+                            <p class="card-text">Public Repositories: ${respData.public_repos}</p>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        XHR.send();
+        console.log("After send(): ", XHR);
+        console.log("After send() readyState val: ", XHR.readyState);
+
+    </script>
+    <!-- <script src="api_requests.js"></script> -->
+
+</body>
+
+</html>
