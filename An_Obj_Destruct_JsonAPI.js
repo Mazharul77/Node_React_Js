@@ -3,14 +3,14 @@
 const invoiceData = {
     'invoiceId': 'INV-PI00101',
     'invName': 'Customer Invoice',
-    'amountTotal': 3500,
+    'amountTotal': 4500,
     'currecncy': 'USD',
     'items': [
         {
             'freelanceServId': 'FS001',
             'description': 'ERP/Ecommerce Solution',
             'qty': 3,
-            'unitPrice': '$500',
+            'unitPrice': 1500,
         },
         
     ],
