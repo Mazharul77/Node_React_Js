@@ -191,7 +191,7 @@ setInterval(function () {
 
 ```
 
-## Guessing Games  with Mazharul Islam Bhuiyan: Pro and Basice Levels: Project 4
+## Guessing Games  with Mazharul Islam Bhuiyan: Pro and Basic Levels: Project 4
 
 ```javascript
 const randomNumber = parseInt(Math.random() * 100) + 1;
