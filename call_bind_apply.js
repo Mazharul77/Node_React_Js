@@ -16,6 +16,6 @@ function CreateStudent(id, name, email, section) {
     this.section = section
 }
 
-studentG = new CreateStudent(1425, 'Mazharul Islam Bhuiyan',  'mazharul15 - 1425@diu.edu.bd', 'G');
+const studentG = new CreateStudent(1425, 'Mazharul Islam Bhuiyan',  'mazharul15 - 1425@diu.edu.bd', 'G');
 console.log(studentG);
 
