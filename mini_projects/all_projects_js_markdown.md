@@ -1,9 +1,12 @@
-# Mark Down: Related to Projects - DOM
+# Hi, I'm Mazharul Islam Bhuiyan. Welcome to my codehouse where we will explore some js projects  in interesting way:
+
+
+# Mark Down: Related to my Projects - DOM
 
 ## Some Attractive Projects in Js: Developed by Myself (Mazharul Islam Bhuiyan)
 [Click here](https://stackblitz.com/edit/stackblitz-starters-qjnqcf5c?file=index.html)
 
-## Theme Switcher Gaming in Js:
+## Theme Switcher Gaming in Js with Mazharul Islam Bhuiyan:
 
 ```javascript
 console.log("Bhuiyan's Js Gaming/Fun!")
@@ -55,7 +58,7 @@ buttons.forEach(function (button) {
 });
  ```
 
-## BMI - Calculator Scripts:
+## BMI - Calculator Scripts  with Mazharul Islam Bhuiyan:
 ```javascript
 
 const form = document.querySelector('form');
@@ -140,7 +143,7 @@ form.addEventListener('submit', function (event) {
 
 ```
 
-## Digital Clock: Project 3:
+## Digital Clock  with Mazharul Islam Bhuiyan: Project 3:
 
 ```javascript
 
@@ -188,7 +191,7 @@ setInterval(function () {
 
 ```
 
-## Guessing Games: Pro and Basice Levels: Project 4
+## Guessing Games  with Mazharul Islam Bhuiyan: Pro and Basice Levels: Project 4
 
 ```javascript
 const randomNumber = parseInt(Math.random() * 100) + 1;
@@ -334,7 +337,7 @@ function startNewGame() {
 
 ```
 
-## KeyBoard Key Events with key names and Ascii values : Project 5
+## KeyBoard Key Events with key names and Ascii values  with Mazharul Islam Bhuiyan: Project 5
 ```javascript
 
 key_area = document.getElementById("key_display");
@@ -364,7 +367,7 @@ window.addEventListener("keydown", (event) => {
 
 ```
 
-## Automated Disco Colors Unlimited : Project 6
+## Automated Disco Colors Unlimited  with Mazharul Islam Bhuiyan: Project 6
 ```javascript
 
 
