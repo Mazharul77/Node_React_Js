@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure & Lexical Scoping</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+
+        .closure_lexical {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-top: 22px;
+            color: #333;
+        }
+
+
+        /* adding smooth transition effect for when the color changes */
+        #output {
+            transition: background-color 0.3 ease, color 0.3 ease;
+        }
+    </style>
+</head>
+
+<body class="bg-info">
+    <div class="container text-center mt-5">
+        <h2 class="closure_lexical bg-light p-3 rounded shadow-sm">
+            Closure & Lexical Scoping Tracker
+        </h2>
+
+        <div class="mt-5">
+            <button id="btn-ExploreNew" class="btn btn-lg btn-light m-2 shadow-sm">Explore New</button>
+            <button id="btn-WatchNow" class="btn btn-lg btn-light m-2 shadow-sm">Watch Now</button>
+            <button id="btn-DownloadNow" class="btn btn-lg btn-light m-2 shadow-sm">Download Now</button>
+        </div>
+
+        <div id="output" class="mt-5 p-4 bg-white rounded shadow-lg"
+            style="font-size: 1.4rem; font-weight: bold; color: #333;">Waiting for a click...</div>
+    </div>
+
+    <script src="closure_lexical_scoping.js"></script>
+</body>
+
+</html>
